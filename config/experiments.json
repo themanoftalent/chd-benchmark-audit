@@ -1,0 +1,23 @@
+{
+  "primary_outer_folds": 5,
+  "primary_outer_seed": 2026,
+  "inner_folds": 3,
+  "inner_seeds": [400,401,402,403,404],
+  "tuning_metric": "roc_auc",
+  "candidates_per_classifier": 8,
+  "classifier_seed": 2026,
+  "source_order": ["Hungarian","Switzerland","Long Beach VA","Cleveland"],
+  "within_source_outer_folds": 4,
+  "source_heldout_inner_seed": 400,
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 2026,
+  "duplicate_seeds": {"first":100,"last":119},
+  "duplicate_test_fraction": 0.2,
+  "duplicate_control_sampling": "without replacement within class, then append to base training",
+  "duplicate_fixed_xgb": {"n_estimators":150,"max_depth":3,"learning_rate":0.1},
+  "threshold_crossfit_folds": 3,
+  "threshold_sensitivity_targets": [0.9,0.95],
+  "shap_background": {"rows":80,"seed":901},
+  "lime": {"cases":100,"case_seed":903,"explainer_seed":902,"perturbations":1500,"missing_sentinel":-999,"discretizer":"quartile"},
+  "note": "Implementation settings in common.py and analysis.py are authoritative. Settings not specified in the manuscript are reconstruction choices and require comparison with original execution artifacts."
+}

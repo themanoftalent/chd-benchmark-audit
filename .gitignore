@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+data/*
+!data/README.md
+results/
+figures/
+*.data
+*.dat
+*.zip
+*.parquet
